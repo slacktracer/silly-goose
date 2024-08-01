@@ -1,21 +1,8 @@
 {
-  "name": "silly-goose",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "build": "vite build",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "dev": "vite dev",
-    "format": "prettier --write .",
-    "lint": "prettier --check . && eslint .",
-    "lint-staged": "lint-staged",
-    "prepare": "husky",
-    "preview": "vite preview",
-    "start": "npm run dev",
-    "test": "npm run test:integration && npm run test:unit",
-    "test:integration": "playwright test",
-    "test:unit": "vitest"
+  "dependencies": {
+    "nanoid": "^5.0.7",
+    "tsx": "^4.16.3",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.28.1",
@@ -23,6 +10,8 @@
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "@types/eslint": "^9.6.0",
+    "@types/node": "^22.0.2",
+    "@types/ws": "^8.5.12",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
@@ -40,5 +29,24 @@
     "vite": "^5.0.3",
     "vitest": "^2.0.0"
   },
-  "type": "module"
+  "name": "silly-goose",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "dev": "vite dev",
+    "format": "prettier --write .",
+    "lint": "prettier --check . && eslint .",
+    "lint-staged": "lint-staged",
+    "prepare": "husky",
+    "preview": "vite preview",
+    "start": "npm run dev",
+    "test": "npm run test:integration && npm run test:unit",
+    "test:integration": "playwright test",
+    "test:unit": "vitest",
+    "x": "tsx ./src/sveltekit-server-plus-web-socket-server.ts"
+  },
+  "type": "module",
+  "version": "0.0.1"
 }
