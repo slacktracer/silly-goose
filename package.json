@@ -41,7 +41,7 @@
     "lint-staged": "lint-staged",
     "prepare": "husky",
     "preview": "vite preview",
-    "start": "npm run dev",
+    "start": "npm run dev -- --host",
     "test": "npm run test:integration && npm run test:unit",
     "test:integration": "playwright test",
     "test:unit": "vitest",
