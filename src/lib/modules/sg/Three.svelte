@@ -27,8 +27,13 @@
 
   const handleResizing = ({ camera, renderer }) => {
     const canvas = renderer.domElement;
-    const height = canvas.clientHeight;
-    const width = canvas.clientWidth;
+
+    const pixelRatio = window.devicePixelRatio;
+
+    // const height = canvas.clientHeight;
+    const height = Math.floor(canvas.clientHeight * pixelRatio);
+    // const width = canvas.clientWidth;
+    const width = Math.floor(canvas.clientWidth * pixelRatio);
 
     if (canvas.width !== width || canvas.height !== height) {
       renderer.setSize(width, height, false);
@@ -106,7 +111,7 @@
 <style>
   canvas {
     display: block;
-    height: 100%;
-    width: 100%;
+    height: 100dvh;
+    width: 100dvw;
   }
 </style>
