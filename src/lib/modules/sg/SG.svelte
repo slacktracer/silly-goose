@@ -2,18 +2,18 @@
   import { onMount } from "svelte";
 
   import { connectToWebSocketServer } from "../core/connect-to-web-socket-server.js";
-  import { mainEventBus } from "../core/main-event-bus";
+  import { getMainEventBus } from "../core/get-main-event-bus.js";
 
   let ws: WebSocket;
 
   onMount(() => {
-    if (mainEventBus) {
-      const websocket = connectToWebSocketServer({ eventBus: mainEventBus });
+    const mainEventBus = getMainEventBus();
 
-      ws = websocket;
+    const websocket = connectToWebSocketServer({ eventBus: mainEventBus });
 
-      console.log(ws);
-    }
+    ws = websocket;
+
+    console.log(ws);
   });
 </script>
 
