@@ -1,4 +1,4 @@
-import type { EventBus } from "../types/EventBus";
+import type { EventBus } from "./make-event-bus.js";
 
 let openingWebSocket = false;
 let webSocket: WebSocket | null = null;

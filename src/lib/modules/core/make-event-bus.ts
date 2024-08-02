@@ -28,3 +28,5 @@ export const makeEventBus = ({ description }: { description: string }) => {
 // todo
 // Compare with https://cameronnokes.com/blog/build-your-own-event-emitter-using-only-native-dom-apis/
 // sync or async?
+
+export type EventBus = ReturnType<typeof makeEventBus>;

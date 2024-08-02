@@ -1,4 +1,4 @@
-import type { EventBus } from "../types/EventBus";
+import type { EventBus } from "./make-event-bus.js";
 
 const iterationInterval = 16;
 
