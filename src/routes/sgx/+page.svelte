@@ -1,8 +1,8 @@
 <script lang="ts">
   import { browser } from "$app/environment";
 
-  import { connectToWebSocketServer } from "../../modules/core/connect-to-web-socket-server.js";
-  import { mainEventBus } from "../../modules/core/main-event-bus";
+  import { connectToWebSocketServer } from "../../lib/modules/core/connect-to-web-socket-server.js";
+  import { mainEventBus } from "../../lib/modules/core/main-event-bus";
 
   let ws: WebSocket;
 
