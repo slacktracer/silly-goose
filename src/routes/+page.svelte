@@ -1,5 +1,5 @@
-<h1>Index</h1>
+<script>
+  import Index from "../lib/Index.svelte";
+</script>
 
-<ul>
-  <li><a href="/sgx">sgx</a></li>
-</ul>
+<Index></Index>
