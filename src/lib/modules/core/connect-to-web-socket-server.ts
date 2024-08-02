@@ -1,4 +1,4 @@
-import type { makeEventBus } from "./make-event-bus";
+import type { EventBus } from "../types/EventBus";
 
 let openingWebSocket = false;
 let webSocket: WebSocket | null = null;
@@ -6,7 +6,7 @@ let webSocketEstablished = false;
 
 export const connectToWebSocketServer = ({
   eventBus,
-}: { eventBus?: ReturnType<typeof makeEventBus> } = {}) => {
+}: { eventBus?: EventBus } = {}) => {
   if (typeof window === "undefined") {
     return;
   }
