@@ -15,7 +15,6 @@ export const makeCube = ({
   const cube = new Mesh(geometry, material);
 
   cube.position.x = x;
-  cube.position.y = cube.geometry.parameters.height / 2;
 
   return cube;
 };
